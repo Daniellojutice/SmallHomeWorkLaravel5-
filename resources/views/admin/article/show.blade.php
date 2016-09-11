@@ -15,7 +15,7 @@
 <div id="content" style="padding: 50px;">
 
     <h4>
-        <a href="/"><< 返回首页</a>
+        <a href="/"><< 返回首頁</a>
     </h4>
 
     <h1 style="text-align: center; margin-top: 50px;">{{ $article->title }}</h1>
@@ -69,6 +69,7 @@
                 textArea.innerHTML = '@'+nickname+' ';
             }
         </script>
+
 
         <div class="conmments" style="margin-top: 100px;">
             @foreach ($article->hasManyComments as $comment)

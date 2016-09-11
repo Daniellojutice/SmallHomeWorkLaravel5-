@@ -42,8 +42,11 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    &nbsp;
+                <ul class="nav navbar-nav navbar-left">
+                    @if(Auth::user())
+                        <li><a href="{{url('/admin')}}">後台首頁</a></li>&nbsp;
+                        <li><a href="{{url('admin/comment')}}">管理評論</a></li>
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->

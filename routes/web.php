@@ -16,9 +16,15 @@ Route::get('/now',function (){
     return date('Y-m-d H:i:s');
 });
 
+
+
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function() {
     Route::get('/', 'HomeController@index');
     Route::resource('article','ArticleController');
+    Route::resource('comment','CommentController');
+   // Route::get('comment','CommentController@index');
+   // Route::get('comment/{comment}/edit','CommentController@edit');
+   // Route::get('/test','CommentController@index');
 });
 
 Route::get('article/{article}','ArticleController@show');

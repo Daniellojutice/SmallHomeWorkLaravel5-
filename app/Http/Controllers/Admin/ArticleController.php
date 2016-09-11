@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
 class ArticleController extends Controller
 {
     public function index(){
-        return view('admin.article.index')->with('articles',Article::all());
+        return view('admin.article.index')->with('articles', Article::all());
     }
 
     public function create(){
@@ -64,6 +64,5 @@ class ArticleController extends Controller
     public function destroy($id){
         Article::find($id)->delete();
         return redirect()->back()->withInput()->withErrors('删除成功！');
-
     }
 }
